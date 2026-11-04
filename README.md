@@ -138,3 +138,9 @@ The Ames dataset describes historical home sales in Ames, Iowa, primarily from 2
 ## 11. Reference implementation
 
 The supplied L&T Fake News Classification repository is used as a project-organization reference: notebooks, reusable source modules, saved model artifacts, app code, dependencies, and documentation. Its NLP/RAG-specific methods are not copied because house-price prediction is a tabular regression problem.
+
+## 🚀 Live Demo
+
+**Try the application here:**
+
+[🏠 House Price Prediction – Live Application](https://l-and-t-assignment-house-price-prediction.onrender.com/)
