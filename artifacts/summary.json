@@ -1,0 +1,162 @@
+{
+  "dataset_type": "kaggle_ames_real",
+  "rows_raw": 1460,
+  "columns_raw": 81,
+  "test_rows": 1459,
+  "feature_count_after_engineering": 89,
+  "training_rows": 1168,
+  "validation_rows": 292,
+  "target_mean": 180921.19589041095,
+  "target_median": 163000.0,
+  "target_min": 34900.0,
+  "target_max": 755000.0,
+  "target_skewness": 1.8828757597682129,
+  "selected_model": "XGBoost",
+  "model_results": [
+    {
+      "Model": "XGBoost",
+      "CV RMSE": 28457.580729166668,
+      "Validation MAE": 15895.8701171875,
+      "Validation RMSE": 27454.653813151606,
+      "Validation R2": 0.9017306566238403
+    },
+    {
+      "Model": "Random Forest",
+      "CV RMSE": 30806.1419157367,
+      "Validation MAE": 17180.806633767857,
+      "Validation RMSE": 30312.3381339167,
+      "Validation R2": 0.8802087657909587
+    },
+    {
+      "Model": "Linear Regression",
+      "CV RMSE": 58252.50389042084,
+      "Validation MAE": 15655.022587885793,
+      "Validation RMSE": 24293.819801143272,
+      "Validation R2": 0.9230554653624234
+    }
+  ],
+  "best_parameters": {
+    "Linear Regression": "Baseline model; default parameters",
+    "Random Forest": {
+      "regressor__model__n_estimators": 220,
+      "regressor__model__min_samples_leaf": 1,
+      "regressor__model__max_features": 0.7,
+      "regressor__model__max_depth": 16
+    },
+    "XGBoost": {
+      "regressor__model__subsample": 1.0,
+      "regressor__model__reg_lambda": 3,
+      "regressor__model__n_estimators": 200,
+      "regressor__model__max_depth": 4,
+      "regressor__model__learning_rate": 0.06,
+      "regressor__model__colsample_bytree": 1.0
+    }
+  },
+  "top_correlations": {
+    "OverallQual": 0.7909816005838053,
+    "GrLivArea": 0.7086244776126515,
+    "GarageCars": 0.6404091972583519,
+    "GarageArea": 0.6234314389183622,
+    "TotalBsmtSF": 0.6135805515591943,
+    "1stFlrSF": 0.6058521846919153,
+    "FullBath": 0.5606637627484453,
+    "TotRmsAbvGrd": 0.5337231555820284,
+    "YearBuilt": 0.5228973328794967,
+    "YearRemodAdd": 0.5071009671113866
+  },
+  "top_neighborhoods": [
+    {
+      "neighborhood": "NoRidge",
+      "mean_price": 335295.31707317074,
+      "median_price": 301500.0,
+      "houses": 41
+    },
+    {
+      "neighborhood": "NridgHt",
+      "mean_price": 316270.6233766234,
+      "median_price": 315000.0,
+      "houses": 77
+    },
+    {
+      "neighborhood": "StoneBr",
+      "mean_price": 310499.0,
+      "median_price": 278000.0,
+      "houses": 25
+    },
+    {
+      "neighborhood": "Timber",
+      "mean_price": 242247.44736842104,
+      "median_price": 228475.0,
+      "houses": 38
+    },
+    {
+      "neighborhood": "Veenker",
+      "mean_price": 238772.72727272726,
+      "median_price": 218000.0,
+      "houses": 11
+    },
+    {
+      "neighborhood": "Somerst",
+      "mean_price": 225379.83720930232,
+      "median_price": 225500.0,
+      "houses": 86
+    },
+    {
+      "neighborhood": "ClearCr",
+      "mean_price": 212565.42857142858,
+      "median_price": 200250.0,
+      "houses": 28
+    },
+    {
+      "neighborhood": "Crawfor",
+      "mean_price": 210624.72549019608,
+      "median_price": 200624.0,
+      "houses": 51
+    }
+  ],
+  "outlier_summaries": {
+    "SalePrice": {
+      "q1": 129975.0,
+      "q3": 214000.0,
+      "iqr": 84025.0,
+      "lower_bound": 3937.5,
+      "upper_bound": 340037.5,
+      "flagged_rows": 61
+    },
+    "GrLivArea": {
+      "q1": 1129.5,
+      "q3": 1776.75,
+      "iqr": 647.25,
+      "lower_bound": 158.625,
+      "upper_bound": 2747.625,
+      "flagged_rows": 31
+    },
+    "LotArea": {
+      "q1": 7553.5,
+      "q3": 11601.5,
+      "iqr": 4048.0,
+      "lower_bound": 1481.5,
+      "upper_bound": 17673.5,
+      "flagged_rows": 69
+    }
+  },
+  "missing_columns_top": {
+    "PoolQC": 1453,
+    "MiscFeature": 1406,
+    "Alley": 1369,
+    "Fence": 1179,
+    "MasVnrType": 872,
+    "FireplaceQu": 690,
+    "LotFrontage": 259,
+    "GarageQual": 81,
+    "GarageFinish": 81,
+    "GarageType": 81,
+    "GarageYrBlt": 81,
+    "GarageCond": 81,
+    "BsmtFinType2": 38,
+    "BsmtExposure": 38,
+    "BsmtCond": 37
+  },
+  "submission_file": "submission.csv",
+  "submission_rows": 1459
+}
